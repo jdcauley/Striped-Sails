@@ -1,15 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h2>One Time Charge</h2>
-      <form action="/stripe/oneTime" method="POST">
+      <h2>Subscription</h2>
+      <form action="/stripe/startMonthly" method="POST">
         <script
-          src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= stripePubKey %>"
           data-amount="2000"
-          data-name="Demo Site"
+          data-name="Subscribe"
           data-description="2 widgets ($20.00)"
-          data-currency="usd"
           data-image="/128x128.png">
         </script>
       </form>

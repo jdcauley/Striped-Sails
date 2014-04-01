@@ -34,6 +34,22 @@ module.exports.routes = {
       stripePubKey: 'pk_test_ZevLbkwzpHB4DUJ6XUtpI7kD'
     }
   },
+  '/custom': {
+    // view: 'homepage'
+    controller: 'views',
+    action: 'custom',
+    locals: {
+      stripePubKey: 'pk_test_ZevLbkwzpHB4DUJ6XUtpI7kD'
+    }
+  },
+  '/subscription': {
+    // view: 'homepage'
+    controller: 'views',
+    action: 'subscription',
+    locals: {
+      stripePubKey: 'pk_test_ZevLbkwzpHB4DUJ6XUtpI7kD'
+    }
+  },
 
 
   // Custom routes here...
