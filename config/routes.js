@@ -50,6 +50,19 @@ module.exports.routes = {
       stripePubKey: 'pk_test_ZevLbkwzpHB4DUJ6XUtpI7kD'
     }
   },
+  '/newcustomer': {
+    // view: 'homepage'
+    controller: 'views',
+    action: 'newcustomer',
+    locals: {
+      stripePubKey: 'pk_test_ZevLbkwzpHB4DUJ6XUtpI7kD'
+    }
+  },
+  '/success': {
+    // view: 'homepage'
+    controller: 'views',
+    action: 'success',
+  },
 
 
   // Custom routes here...

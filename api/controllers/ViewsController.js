@@ -17,6 +17,14 @@ module.exports = {
 
   subscription: function(req, res){
     res.view();
-  }
+  },
+
+  newcustomer: function(req, res){
+    res.view();
+  },
+
+  success: function(req, res){
+    res.view();
+  },
 
 };
