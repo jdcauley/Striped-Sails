@@ -33,26 +33,10 @@ module.exports = {
     res.redirect('/');
   },
   oneTimeCustom: function(req, res){
-    // Set your secret key: remember to change this to your live secret key in production
-    // See your keys here https://manage.stripe.com/account
-    // (Assuming you're using express - expressjs.com)
-    // Get the credit card details submitted by the form
-    /*
-    var stripeToken = req.param('stripeToken'),
-        amount = req.param('amount'),
-        email = req.param('email');
-    */
+
     var params = req.params.all();
 
     console.log(params.stripeToken + ',' + params.amount + ',' + params.email);
-    /*
-    Customer.create(params, function(err, user){
-      if (err){ res.send(500, err);
-      } else {
-        console.log('Added to DB')
-      }
-    });
-    */
 
     var charge = stripe.charges.create({
       amount: params.amount, // amount in cents, again
@@ -90,10 +74,6 @@ module.exports = {
   },
 
   customerCreate: function(req, res){
-    // Set your secret key: remember to change this to your live secret key in production
-    // See your keys here https://manage.stripe.com/account
-    // (Assuming you're using express - expressjs.com)
-    // Get the credit card details submitted by the form
 
     var params = req.params.all();
       console.log(params.stripeToken + ',' + params.amount + ',' + params.email);
